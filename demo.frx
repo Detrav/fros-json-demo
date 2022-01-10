@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/10/2022 12:54:40" ReportInfo.Modified="01/10/2022 12:59:53" ReportInfo.CreatorVersion="2022.1.2.0">
+  <Dictionary>
+    <JsonDataSourceConnection Name="MyConnection" ConnectionString="rijcmlqrcq6OJBTPt0pNFvRuRtDUSHSHLQy/QlNolifTTaTjsrExzdbf1ifpPblp655sducNZ0vhzolLfZG3s9ojtWdi/pdKGMRJH8wOVKr4DKIgTGnpcQqSNd3Zfr+dyiJOpxNTmDBHacmfBHUh1xVTMl3R4U4EjXEPEUoKN4/lrdC7dvXubgBo0D1rJdoaiU4NGTM+wxHLacsr2eswUAW6ihhXtJq2ktZiJjOsV2bij605BDsPqhVFeiXGocfM/bFnzDvixRwiudZEeBv6a0Nlu2vji4bjqKuXSY0mRkQ7gGOUPCCmks1FZI32FAIyDGyAPR2DqF8VA73iQ87ycvsnt/qjjz208EJl2CqhINxg8nDxlEf1iVsckTIvO4NaUSkhH2oeUhTCTFlp/DvMIZrTAmZV0ExS9Vgpf948uo8oN+nh+A=">
+      <JsonTableDataSource Name="JSON" DataType="FastReport.Data.JsonConnection.JsonParser.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <Column Name="userId" DataType="System.Double"/>
+          <Column Name="id" DataType="System.Double"/>
+          <Column Name="title" DataType="System.String"/>
+          <Column Name="completed" DataType="System.Boolean" BindableControl="CheckBox"/>
+        </Column>
+        <Column Name="array" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"/>
+    <DataBand Name="Data1" Top="39.4" Width="718.2" Height="18.9" DataSource="JSON">
+      <TextObject Name="Text1" Width="718.2" Height="18.9" CanGrow="true" Text="[JSON.item.title]" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="59.9" Width="718.2" Height="28.35" CanGrow="true"/>
+  </ReportPage>
+</Report>
